@@ -10,16 +10,29 @@
         }
         table{
             width: 500px;
-            height: 100px;
             border-collapse: collapse;
+            position: relative;
         }
         td, th{
             border: 1px solid black;
             padding: 10px;
         }
+        tbody > tr:nth-child(odd){ /* 2n */
+            background-color: white;
+        }
+
+        tbody > tr:nth-child(even){ /* 2n-1 */
+            background-color: lightgray;
+        }
+        
         thead, tfoot{
-            background-color: gray;
+            background-color: rgb(83, 83, 83);
             color: white;
+        }
+        thead > tr > th{ /* cabeçalho ficar fixo enquanto rola a tabela */
+            position: sticky;
+            top: 0;
+            background-color: rgb(83, 83, 83);
         }
         td.num{
             text-align: right;
